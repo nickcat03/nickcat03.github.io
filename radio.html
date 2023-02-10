@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="utf-8">
+    <style>
+    @import url('styles.css');
+
+    body {
+        background-color: black;
+        color: white;
+        background-attachment: fixed;
+        background-image: url('images/backgrounds/starbackgrounds.gif');
+        background-repeat: repeat;
+        font-family: serif;
+    }
+
+    .music-container {
+        text-align: center;
+    }
+
+    .descriptions {
+        margin: auto;
+        position: fixed;
+        left: 470px;
+        right: 0;
+        top: 30px;
+        width: 200px;
+        line-height: 140%;
+    }
+
+    .navigation {
+        margin: auto;
+        position: fixed;
+        left: 470px;
+        right: 0;
+        top: 150px;
+        width: 200px;
+        line-height: 140%;
+    }
+
+    ul {
+        line-height: 200%;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    .action-btn, .playlist-btn {
+        font-size: 16px;
+        font-family: "Times New Roman";
+        color: var(--link-color);
+        border: 0;
+        background: transparent;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    </style>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.4" /> 
+        <title></title> 
+    </head>
+    <body class="darkbglinks">
+
+        <div class="playlistcontainer">
+            <div class="music-body">
+                <div class="playlist" style="float:left">
+                    <ul class="tracklist">
+                        <p id="tracklist"></p>
+                    </ul>
+                </div>
+                <div class="music-container" style="float:right">
+                    <div class="descriptions">
+                        <h2 style="text-align:center">Retro Radio</h2>
+                        <div class="music-info">
+                            <div id="musictitle"><span id="title">Title</span><span id="artist"></span></div>
+                            <p id="album" style="display: none;"></p>
+                            <div class="progress-container" style="display: none;">
+                                <p style="font-size: 16px;" id="duration">Duration</p>
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <audio src="" id="audio"></audio>
+                        <div class="img-container" style="display: none;">
+                            <img src="" alt="Album cover" id="cover" />
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <br>
+                        <button id="prev" class="action-btn">
+                        <img src="images/gifs/spinningarrow.gif" alt="Prev">
+                        </button>
+                        <button id="play" class="action-btn">
+                        <img height="20px" src="images/pause.png" alt="Play/Pause">
+                        </button>
+                        <button id="next" class="action-btn">
+                        <img style="transform:scalex(-1)" src="images/gifs/spinningarrow.gif" alt="Next">
+                        </button>
+                        <p></p>
+                        <br>
+                        <p></p>
+                        <button id="shuffle" class="action-btn">
+                        <p>shuffle playlist</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="script/playlist.js"></script>
+
+    </body>
+</html>

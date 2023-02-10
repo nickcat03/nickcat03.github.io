@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="utf-8">
+    <style>
+    @import url('css/styles.css');
+
+    body {
+        background-color:pink;
+    }
+    
+    .playlistcontainer {
+        text-align: center;
+    }
+    
+    .tracklist {
+        list-style-type: none;
+        line-height: 200%;
+    }
+
+    </style>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.4" /> 
+        <title>Music Player</title> 
+    </head>
+    <body>
+
+        <div class="playlistcontainer">
+            <h2><img style="transform:scalex(-1)" src="images/gifs/kirby-rock-kss.gif">Nippo's Retro Radio<img src="images/gifs/kirby-rock-kss.gif"></h2>
+            <p>All of the tracks from the sidebar playlist, in order. Click any of the songs to download!</p>
+            <div class="music-body">
+                <div class="music-container">
+                    <div class="music-info">
+                        <div style="display: none;" id="musictitle"><span id="title">Title</span><span id="artist"></span></div>
+                        <p id="album" style="display: none;"></p>
+                        <div class="progress-container" style="display: none;">
+                            <p style="font-size: 16px;" id="duration">Duration</p>
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <audio src="" id="audio"></audio>
+                    <div class="img-container" style="display: none;">
+                        <img src="" alt="Album cover" id="cover" />
+                    </div>
+                    <div class="navigation" style="display: none;">
+                        <button id="prev" class="action-btn"></button>
+                        <button id="play" class="action-btn"></button>
+                        <button id="next" class="action-btn"></button>
+                    </div>
+                    <div class="playlist scroll">
+                        <ul class="tracklist">
+                           <a href="audio/kirbysuperstar_save_hut.mp3"><li data-index="0"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/03_Hometown.mp3"><li data-index="1"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/210_Remains_of_the_Factory.mp3"><li data-index="2"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/digimon-dawndusk-worldmap.mp3"><li data-index="3"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/sonic_advance_ice1.mp3"><li data-index="4"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/07_Aquatic_Ambiance.mp3"><li data-index="5"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/07-hydrocity_act_2.mp3"><li data-index="6"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/ntranced15.mp3"><li data-index="7"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/15_Ripple_Field_2.mp3"><li data-index="8"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a>
+                           <a href="audio/02_lal-02.mp3"><li data-index="9"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/17_Beachside_Dream.mp3"><li data-index="10"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/SparkStage2.mp3"><li data-index="11"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/SMB2Ocean.mp3"><li data-index="12"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/02_Voice_of_Awakening.mp3"><li data-index="13"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/DSiSparkle.mp3"><li data-index="14"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/FF7AheadOnOurWay.mp3"><li data-index="15"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/MM8FrostMan.mp3"><li data-index="16"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/AdvWarsLostMemories.mp3"><li data-index="17"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/hangglider.mp3"><li data-index="18"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/rydia.mp3"><li data-index="19"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/endofthejourney.mp3"><li data-index="20"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/tenantwars15.mp3"><li data-index="21"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/strad.mp3"><li data-index="22"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                           <a href="audio/insaniquarium_tank_1.mp3"><li data-index="23"><span class="trackInfo"><span class="trackTitle">Title</span> - <span class="trackArtist">Artist</span></span><span class="trackDuration" style="display:  none;">Duration</span></li></a> 
+                        </ul>
+                     </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script src="script/playlist.js"></script>
+
+    </body>
+</html>

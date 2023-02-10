@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="utf-8">
+    <style>
+    
+    @import url('styles.css');
+
+    * {
+        scrollbar-color: #29304b #000020;
+    }
+
+    :root {
+        --link-color: rgb(234, 175, 255);
+        --link-color-hover: rgb(252, 234, 255);
+    }
+
+    ::-webkit-scrollbar {
+        background: #000020;
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #000020;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #29304b;
+        border-radius: 10px;
+    }
+
+
+    body {
+        margin: 0px;
+        background-color: black;
+        background-attachment: fixed;
+    }
+
+    h1 {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    li {
+        font-size: 15px;
+        margin-bottom: 12px;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0 5px 25px 5px;
+    }
+
+    li a {
+        color: var(--link-color);
+    }
+
+    li a:hover {
+        color: var(--link-color-hover);
+        -webkit-filter: drop-shadow(0px 0px 15px rgb(255, 196, 252));
+        filter: drop-shadow(0px 0px 15px rgb(252, 194, 255));
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul img {
+        height: 50px;
+    }
+
+    .gators {
+        margin: 2px auto;
+        width: 100px; 
+        text-align: center;
+    }
+
+
+    .playlistcontainer {
+        margin-bottom: 3px;
+    }
+
+    .playlist {
+        margin: 5px;
+        text-align: center;
+    }
+
+    #musictitle {
+        font-family: "Times New Roman";
+        font-size: 13px;
+    }
+
+    .action-btn, .playlist-btn {
+        font-size: 16px;
+        font-family: "Times New Roman";
+        color: var(--link-color);
+        border: 0;
+        background: transparent;
+        text-decoration: underline
+    }
+
+    .action-btn:hover, .playlist-btn:hover {
+        color: var(--link-color-hover);
+    }
+
+    #badges img {
+        margin-bottom: 5px;
+        max-width: 88px;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+    }
+
+    </style>
+    <head>
+        <title>Main Navbar</title> 
+    </head>
+    <body class="starbg" style="text-align:center; margin-top:10px; margin-bottom:0px;">
+
+        <audio>
+            <source id="soundclick" src="audio/sfx/wi_menuc.mp3"></source>
+            <source id="soundhover" src="audio/sfx/wi_menup.mp3"></source>
+        </audio>
+
+        <script>
+            function playAudioOnClick(url) {
+                new Audio(url).play();
+            }
+
+            function playAudioOnHover(url) {
+                new Audio(url).play();
+            }
+
+        </script>
+
+
+        <img class="gators" src="images/gifs/gatordance.gif">
+        <h1>Nav-o-Gator</h1>
+        <div class="content navbar">
+            <ul>
+                <li onclick="playAudioOnClick('audio/wi_menuc.wav')">
+                    <a href="home.html" target="main"><img onmouseover="playAudioOnHover('audio/wi_menup.wav')" style="transform: ScaleX(-1)" src="images/gifs/kirby.gif">
+                        Home</a>
+                </li>
+                <br>
+                <li onclick="playAudioOnClick('audio/wi_menuc.wav')">
+                    <a href="retro-zone/index.html" target="main"><img onmouseover="playAudioOnHover('audio/wi_menup.wav')" src="images/gifs/Kirby-sprite-run.gif">
+                        Retro</a>
+                </li>
+                <br>
+                <li onclick="playAudioOnClick('audio/wi_menuc.wav')">
+                    <a href="journal/index.html" target="main"><img onmouseover="playAudioOnHover('audio/wi_menup.wav')" src="images/gifs/kirby_swim.gif">Journal</a>
+                </li>
+                <br>
+                <li onclick="playAudioOnClick('audio/wi_menuc.wav')">
+                    <a href="art/index.html" target="main"><img onmouseover="playAudioOnHover('audio/wi_menup.wav')" src="images/gifs/kirbypaintcrop.gif">Art</a>
+                </li>
+                <br>
+                <li onclick="playAudioOnClick('audio/wi_menuc.wav')">
+                    <a href="https://nippo.123guestbook.com/#" target="main"><img onmouseover="playAudioOnHover('audio/wi_menup.wav')" src="images/gifs/kirbydoor.gif">Guestbook</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!--music player-->
+        <!--this shit is coded so horribly but it WORKS!!!!!!-->
+
+        <div class="playlistcontainer">
+            <h2>Music Player</h2>
+            <div class="music-body">
+                <div class="music-container">
+                    <div class="music-info">
+                        <div id="musictitle"><span id="title">Title</span><span id="artist"></span></div>
+                        <p id="album" style="display: none;"></p>
+                        <div class="progress-container" style="display: none;">
+                            <p style="font-size: 16px;" id="duration">Duration</p>
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <audio src="" id="audio"></audio>
+                    <div class="img-container" style="display: none;">
+                        <img src="" alt="Album cover" id="cover" />
+                    </div>
+                    <div class="navigation">
+                        <button id="prev" class="action-btn">
+                        <img src="images/gifs/spinningarrow.gif" alt="Prev">
+                        </button>
+                        <button id="play" class="action-btn">
+                        <img height="20px" src="images/pause.png" alt="Play/Pause">
+                        </button>
+                        <button id="next" class="action-btn">
+                        <img style="transform:scalex(-1)" src="images/gifs/spinningarrow.gif" alt="Next">
+                        </button>
+                    </div>
+                    <a class="playlist-btn" style="font-size:12px;" target="main" href="musicplayer.html">View Playlist</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script src="script/playlist.js"></script>
+        
+        <br>
+        <p class="darkbglinks" style="font-size:13px">Hate the navbar? <a href="no-navbar.html" target="_top">Click here!</a></p>
+        
+
+    </body>
+</html>

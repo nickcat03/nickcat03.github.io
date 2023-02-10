@@ -1,0 +1,74 @@
+/*fonts*/
+@font-face {
+    font-family: "PixelOperator";
+    src: url("../fonts/PixelOperator.ttf") format('truetype');
+}
+@font-face {
+    font-family: "PixelOperator";
+    src: url("../fonts/PixelOperator-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: "SNES";
+    src: url("../fonts/SnesItalic-1G9Be.ttf") format('truetype');
+}
+
+
+/*retro bg*/
+body.retro {
+    margin: 0px 50px;
+    font-family: "PixelOperator";
+}
+
+.retro p {
+    font-size: 20px;
+}
+
+.retro li {
+  font-size: 20px;
+}
+
+.retro h2 {
+    font-family: "PixelOperator";
+    text-align: center;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.retro h3 {
+    font-size: 30px;
+}
+
+.retro h4 {
+    font-size: 25px;
+}
+        
+.retro .content {
+    color: white;
+}
+
+.retro img {
+    margin: 10px;
+}
+
+.darkbglinks a:link {
+    color: rgb(255, 163, 179);
+    background-color: transparent;
+    text-decoration: none;
+}
+.darkbglinks a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+.darkbglinks a:hover {
+    color: rgb(255, 118, 118);
+    background-color: transparent;
+    text-decoration: underline;
+}
+.darkbglinks a:active {
+    color: rgb(247, 44, 220);
+    background-color: transparent;
+    text-decoration: underline;
+}

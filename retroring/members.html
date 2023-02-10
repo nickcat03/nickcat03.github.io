@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="utf-8">
+    <style>
+    @import url('styles.css');
+
+    textarea {
+        display: inline-block;
+        width: 20%;
+        height: 50px;
+        background-color: rgb(0, 162, 255);
+        resize: none;
+        color: white;
+    }
+    
+    </style>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.4" /> 
+        <title>Retro Gaming Webring</title> 
+    </head>
+    <body class="retro">
+        <h1>The Retro Gaming Webring</h1>
+        
+        <p>Welcome to my webring! This webring is meant for those who have websites that touch on retro gaming, or those who are enthusiasts of retro gaming.</p>
+        <p>What constitutes as retro gaming? If <i>you</i> think its retro, then it probably is! "Retro" is a simple term that encapsulates something from older generations.</p>
+
+        <h2>How to apply:</h2>
+        <p>Email me at <a href="mailto: mariosnippos@gmail.com">mariosnippos@gmail.com</a>, or contact me from one of my links <a target="_blank" href=/socials.html>here</a>. From there, I will check out your website and add you to the ring.</p>
+        <p>Please email me:</p>
+        <ul>
+            <li>Site name</li>
+            <li>Your name</li>
+            <li>Site link</li>
+            <li>Any custom art/styling you would like to add! Though, this is available to customize yourself if you prefer.</li>
+        </ul>
+        <p>I will email you back once you are in the list. Then, you can add this code to your website:</p>
+        <textarea id="badge-text" border="1" disabled><script src="https://nippoverse.xyz/retroring/webring.js"></script><ring-063 site="YOUR URL HERE"></ring-063></textarea>
+
+        <h2>How to style the widget:</h2>
+        <p>Copy and paste this code into your &lt;style&gt; box, then from there change any values you'd like to edit! (make sure to keep !important for everything you want to change)</p>
+        <textarea id="badge-text" border="1" disabled>
+:root {
+/* background! */
+--w9p1h3-background-image: url("https://nippoverse.xyz/retroring/mario64.png") !important;
+--w9p1h3-background-size:cover !important;
+--w9p1h3-background-color:pink !important;
+--w9p1h3-background-size: cover !important;
+--w9p1h3-border:5px solid pink !important;
+--w9p1h3-border-radius:5px !important;
+  
+/* sizing */
+--w9p1h3-width:200px !important;
+--w9p1h3-height:75px !important;
+--w9p1h3-padding:1rem !important;
+  
+
+/* title! */
+--w9p1h3-title-font:'Arial' !important;
+--w9p1h3-title-color:rgb(255, 105, 155) !important;
+--w9p1h3-title-size:35px !important;
+--w9p1h3-title-align:center !important;
+--w9p1h3-title-margin:5px !important;
+  
+/* line height & letter spacing */
+--w9p1h3-title-height:25px !important;
+--w9p1h3-title-spacing:3px !important;
+--w9p1h3-title-weight:bold !important;
+
+
+/* text! */
+--w9p1h3-text-family:sans-serif !important;
+--w9p1h3-text-color:rgb(0, 255, 200) !important;
+--w9p1h3-text-size:14px !important;
+--w9p1h3-text-align:center !important;
+--w9p1h3-text-spacing:1px !important;
+--w9p1h3-text-height:1em !important;
+
+/* links! */
+--w9p1h3-link-family:sans-serif !important;
+--w9p1h3-link-color:cyan !important;
+--w9p1h3-link-decoration:none !important;
+--w9p1h3-link-weight:bold !important;
+--w9p1h3-link-size:13px !important;
+}
+</textarea>
+
+
+        <hr>
+        <h3>Member List:</h3>
+        <div id="myData"></div>
+        <hr>
+        
+        <p>This webring is still a WIP, but the backend is fully functional.</p>
+        <p>Credit to <a href="https://sadgrl.online/">sadgrl</a> for their <a href="https://learn.sadgrl.online/how-to-make-your-own-webring/">amazing webring guide</a>.</p>
+
+        <div style="text-align:center;">
+            <script src="https://nippoverse.xyz/retroring/webring.js"></script>
+            <ring-063 site="https://nippoverse.xyz/retroring/members.html"></ring-063>
+        </div>
+    </body>
+
+    <script>
+        fetch('https://nippoverse.xyz/retroring/webring.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = '<strong>Name:</strong> ' + data[i].name + '<br/>' + '<strong>URL: </strong>' + '<a href="' + data[i].url + '">' + data[i].url + '</a>' + '<br/>' + '<strong>Owner:</strong> ' + data[i].owner + '<br/><br/>';
+                mainContainer.appendChild(div);
+                div.classList.add("item");
+            }
+        }
+    </script>
+</html>
+
+

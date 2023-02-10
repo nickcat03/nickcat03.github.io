@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="utf-8">
+    <style>
+        @import url("styles.css");
+
+        :root {
+        --link-color: rgb(234, 175, 255);
+        --link-color-hover: rgb(252, 234, 255);
+        }
+
+
+        body {
+            background-color: black;
+            background-image: url("images/backgrounds/snowflakes.gif"), url("images/backgrounds/starbg_bottom.png"), url("images/backgrounds/kirby_starbg.png");
+            background-position: center, center bottom, center top;
+            background-repeat: repeat, repeat-x, repeat;
+            margin: 0px;
+        }
+
+        .content {
+            background: rgba(24, 13, 26, 0.87);
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgb(151, 59, 255);
+        }
+
+        .entire-thing {
+            min-width: 1000px;
+        }
+
+        .main-window {
+            display: block;
+            padding: 20px;
+            margin: 20px auto;
+            width: auto;
+            min-width: 600px;
+            max-width: 700px;
+        }
+
+        .left-window {
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 930px;
+            top: 120px;
+            width: 120px;
+        }
+
+        hr {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .links {
+            text-align: center;
+            line-height: 1.8;
+            margin-top: 0px;
+            margin-right: 5%;
+            margin-left: 0px;
+        }
+
+        .links img {
+            height: 60px;
+        }
+
+        .links ul {
+            list-style: none;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+
+        .links ul a:hover {
+            color: var(--link-color-hover);
+            -webkit-filter: drop-shadow(0px 0px 15px rgb(255, 196, 252));
+            filter: drop-shadow(0px 0px 15px rgb(252, 194, 255));
+        }
+
+        .links ul > li{
+            padding: 15px;
+            width: 100%;
+        }
+
+        #title {
+            text-shadow: 0px 2px 10px blue;
+        }
+
+        .bottom {
+            padding-top: 20px;
+            text-align: center;
+            color: lightblue;
+            font-size: 12px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .webrings {
+            line-height: 200%;
+        }
+
+        textarea {
+            display: inline-block;
+            width: 20%;
+            height: 50px;
+            background-color: rgb(0, 162, 255);
+            resize: none;
+            color: white;
+        }
+
+        .chad {
+            margin: auto;
+            position: absolute;
+            left: 750px;
+            right: 0;
+            top: 250px;
+        }
+
+        .radio {
+            margin: auto;
+            position: absolute;
+            left: 850px;
+            right: 0;
+            top: 400px;
+        }
+
+        #chadhover, #radiohover {
+            color: var(--link-color-hover);
+            -webkit-filter: drop-shadow(0px 0px 15px rgb(255, 196, 252));
+            filter: drop-shadow(0px 0px 15px rgb(252, 194, 255));
+        }
+
+        .image_off, #imghover:hover .image_on{
+            display:none;
+        }
+        .image_on, #imghover:hover .image_off{
+            display:block;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        // Popup window code
+        function newPopup(url) {
+            popupWindow = window.open(
+            url,'popUpWindow','height=320,width=780,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+        }
+    </script>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.4" />
+        <link rel="icon" type="image/x-icon" href="images/favicons/favicon.png">
+        <title>Nippo's Home Page</title>
+    </head>
+
+    <body class="darkbglinks">
+        <div class="entire-thing">
+            <br>
+            <div class="title" style="color:lightblue;">
+                <h1 id="title" style="font-size:350%; margin-top:0px; margin-bottom:0px;">
+                    Heyo, I'm Nippo!
+                </h1>
+                <div class="content left-window">
+                    <p style="margin-bottom:2px;">Also Visit:</p>
+                    <p><div id="badges">
+                        <a href="https://yesterweb.org/" target="_blank"><img src="images/buttons/yesterweb.png" /></a>
+                        <a target="_blank" href="https://melonking.net"><img alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF" /></a>
+                        <a target="_blank" href="https://forum.melonland.net/"><img src="images/buttons/MELONLAND-FORUM.GIF">
+                        <a href="https://onio.neocities.org/" target="_blank"><img src="images/buttons/oniobutton.gif"></a>
+                        <a href="https://daniele63.neocities.org/" target="_blank"><img src="https://daniele63.neocities.org/images/danieles_button.jpg">
+                        <a href="https://myblace.neocities.org/" target="_blank"><img src="images/buttons/MyBlace.png" /></a>
+                        <a href="https://www.bittersweetcandybowl.com" target="_blank"><img src="images/buttons/bcb.png" /></a>
+                        <a href="https://odditycommoddity.neocities.org/" target="_blank"><img src="images/buttons/oddity.gif" /></a>
+                        <a href="https://lu.tiny-universes.net/" target="_blank"><img src="images/buttons/lulu.gif" /></a>
+                        <a href="https://cobradile.neocities.org/" target="_blank"><img src="https://cobradile.neocities.org/images/buttons/mabutton.png" /></a>
+                        <a href="https://hotlinecafe.neocities.org/" target="_blank"><img src="images/buttons/hotlinecafebutton3.gif"></a>
+                        <a href="https://www.bikobatanari.art/" target="_blank"><img src="images/buttons/bikobatanari.gif" /></a>
+                        <a href="https://daximus.site" target="_blank"><img src="https://daximus.neocities.org/images/dax_alien.gif" alt="Daximus"></a>
+                        <a href="https://dimwit.neocities.org/" target="_blank"><img src="https://dimwit.neocities.org/images/buttons/my-buttons/dimgif.gif"></a>
+                        <a href="https://kirbysdreamsite.neocities.org/" target="_blank"><img src="images/buttons/kirbysdreamsite.gif"></a>
+                        <a href="https://hopeslair.neocities.org/" target="_blank"><img src="https://hopeslair.neocities.org/pictures/buttonsite.png"></a>
+                        <a href="https://displayman.neocities.org/" target="_blank"><img src="https://displayman.neocities.org/Bot%C3%B3n_p%C3%A1gina_Daniel.gif" alt="Botón_página_Daniel.gif"></a>
+                        <a href="https://www.lejlart.com/apple.html" target="_blank"><img src="images/buttons/ad_skullsprinkles.gif"></a>
+                        <a href="https://sigmatic.neocities.org/" target="_blank"><img src="images/buttons/sigmaticbutton.gif"></a>
+                        <a href="https://molecule31.neocities.org" target="_blank"><img style="image-rendering: auto;" width="88px" height="31px" src="https://molecule31.neocities.org/molecule31.gif"></a>
+                        <a href="https://corruptedunicorn.neocities.org/" target="_blank"><img src="images/buttons/corruptedbutt03.png"></a>
+                        <a href="https://sif-muna.neocities.org/" target="_blank"><img src="images/buttons/SifButton.gif"></a>
+                        <a href="https://thebiggestwebsite.neocities.org/" target="_blank"><img src="images/buttons/thebiggestwebsitebutton.gif"></a>
+                        <br>
+                    </div></p>
+                </div>
+                <div class="content main-window">
+                    <img alt="おはよう" src="images/gifs/ohayo.gif">
+                    <h2 style="font-size:200%; margin-top:10px;">
+                    <img alt="Hamtaro Wave" src="images/gifs/mittel.gif" height="40px" style="margin-right:10px;">
+                    Welcome to my Website!
+                    <img alt="Hamtaro Wave" src="images/gifs/mittel.gif" height="40px" style="transform: scaleX(-1); margin-left:10px;"></h2>
+                    <p>Here you can keep up to date with all things Nippo! Wow, isn't that exciting??</p>
+                    <p>Feel free to click on a bunch of things below. Don't be shy.</p>
+                    <br>
+                
+                    <div>
+                        <div class="links">
+                            <ul>
+                                <li><a href="aboutme.html"><img src="images/gifs/minccino-bow.gif"><br><nobr>About Me</nobr></a></li>
+                                <li><a href="socials.html"><img src="images/gifs/atsign.gif"><br>Contact</a></li>
+                                <li><a href="speedrunning.html"><img src="images/gifs/kirby_walk.gif"><br>Speedrunning</a></li>
+                                <li><a href="downloads.html"><img src="images/gifs/tools.gif"><br>Tools</a></li>
+                                <li><a href="moshpit.html"><img src="images/gifs/farout.gif"><br><nobr>The Moshpit™</nobr></a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="retro-zone/index.html"><img src="images/gifs/Kirby-sprite-run.gif"><br>Retro</a></li>
+                                <li><a href="journal/index.html"><img src="images/gifs/kirby_swim.gif"><br>Journal</a></li>
+                                <li><a href="art/index.html"><img src="images/gifs/kirbypaintcrop.gif"><br>Art</a></li>
+                                <li><a href="https://nippo.123guestbook.com/#"><img src="images/gifs/kirbydoor.gif"><br>Guestbook</a></li>
+                            </ul>
+                        </div>
+                        <br>
+                    </div>
+                    <hr>
+
+                    <div style="text-align:center; color:red;">
+                        <p>This site is always being worked on, be careful out there!</p>
+                        <img alt="Under Construction" src="images/gifs/underconstruction.GIF">
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <h2 style="font-size:200%;">Nippo News</h2>
+                        <iframe id="target" name="newsbox" src="news.html" style="overflow: hidden; width: 100%; height: 300px; border: none;"></iframe>
+                    </div>
+
+                    <hr>
+
+
+                    <div>
+                        <img src="images/pikachu.gif">
+                    </div>
+                    <div style="text-align:center; font-family:Lucida Console; margin:0px;">
+                        <div>
+                            <p style=" color:#b9b5fc;">
+                            (\__/) <br>
+                            (='.'=) <br>
+                            (")_(") </p>
+                        </div>
+                        <p class="title" style="color:azure;">This is Bunny. Copy and paste Bunny into your webpage to help him gain world domination.</p>
+                    </div>
+                    <div>
+                        <img src="images/nago.png">
+                        <br>
+                        <a href="https://voupie.lol/chaogarden"><img style="height: 200px;" src="images/gifs/pinkslip.gif"></a>
+                        <p>This is Pinkslip. He keeps this site nice and clean while I'm gone.</p>
+                    </div>
+                    <hr>
+
+                    <h3>Button to my page!</h3>
+                    <textarea id="badge-text" border="1" disabled><a target="_blank" href="https://nippo.neocities.org"><img alt="Visit The Nippoverse" src="https://nippo.neocities.org/images/buttons/nippo.png"></a></textarea>
+                    <a target="_blank" href="https://nippo.neocities.org"><img alt="Visit The Nippoverse" src="https://nippo.neocities.org/images/buttons/nippo.png"></a>
+                    <hr>
+                    <div style="text-align:center">
+                        <img src="images/buttons/kirbyfan.png">
+                        <img src="images/buttons/pokemonfan.png">
+                        <br>
+                        <a target="_blank" href="https://neocities.org/"><img src="images/buttons/neocities.gif"></a>
+                        <img src="images/buttons/parentaladvisory.png"></a>
+                        <a target="_blank" href="https://linuxmint.com/"><img src="images/buttons/linuxbutton.gif"></a>
+                        <img src="images/buttons/furret.gif">
+                        <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/"><img src="images/buttons/getfirefox.gif"></a>
+                        <img src="images/buttons/zzz.gif">
+                        <a href="https://anlucas.neocities.org/GifFiles.html" target="_blank"><img src="images/buttons/wwwbutton.gif"> </a>                    
+                        <!-- put 'actual websites' in the sidebar -->
+                    </div>
+
+                    <br>
+                    <a href="credits.html">Site Credits</a>
+
+                    <div class="bottom">
+                        <img src="images/icons/worldwideweb_badge.gif">
+                        <p>Site Established 8/31/2022</p>
+                        <p>&copy; Nippo's Really Cool Website - 2022-Whenever</p>
+                    </div>
+                </div>
+
+
+                </div>
+                
+                <a href="chad.html" id="imghover"><img class="chad image_on" src="images/chadidle.png" alt="chad" /><img id="chadhover" class="chad image_off" src="images/chadhover.gif" alt="chad" /></a>
+                <a href="JavaScript:newPopup('radio.html')" id="imghover"><img class="radio image_on" src="images/kirbymusicidle.png" alt="radio" /><img id="radiohover" class="radio image_off" src="images/kirbymusichover.gif" alt="radio" /></a>
+            </div>
+        </div>
+
+        <!-- https://www.techwalla.com/articles/how-to-make-songs-the-same-volume-in-audacity -->
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+/*journal bg*/
+body.journal {
+    background-image: url("../images/backgrounds/Clear_Day_Bkgrd.jpg");
+    background-repeat: repeat;
+}
+
+.journal .content {
+    margin: 20px auto;
+    width: auto;
+    max-width: 900px;
+    line-height: 200%;
+}
+
+.journal h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.journal h2 {
+    font-size: 12px;
+}
+
+.journal p {
+    font-size: 18px;
+}
+
+.center {
+    text-align: center;
+}
