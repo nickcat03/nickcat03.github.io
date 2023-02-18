@@ -6,7 +6,7 @@
 
     body {
         background-color: rgb(245, 194, 255);
-        background-image: url("/images/backgrounds/purplepaint.png");
+        background-image: url("images/bg/purple.png");
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0px;
@@ -26,10 +26,39 @@
     }
 
     h2 {
-        font-size: 15px; 
+        font-size: 25px; 
     }
 
+
+    .links {
+        text-align: center;
+        line-height: 1.8;
+        margin-top: 0px;
+    }
+
+    .links img {
+        height: 300px;
+    }
+
+    .links ul {
+        list-style: none;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .links ul a:hover {
+        color: var(--link-color-hover);
+        -webkit-filter: drop-shadow(0px 0px 15px rgb(255, 172, 251));
+        filter: drop-shadow(0px 0px 15px rgb(255, 172, 251));
+    }
+
+    .links ul > li{
+        padding: 15px;
+        width: 40%;
+    }
     
+
     </style>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=0.4" /> 
@@ -42,27 +71,24 @@
                 <h2>Only Quality Stuff Here™</h2>
             </div>
             <div style="text-align:left;">
-                <img style="float:right; margin: 0px 0px 0px 30px" src="/images/bruleepaint.png">
+                <img style="float:right; margin: 0px 0px 0px 30px" src="images/char/brulee/bruleepaint.png">
                 <br>
                 <p>Welcome to my art portfolio! Here I have all (or rather, most) of my art displayed on this page.</p>
                 <p>
                     You can also find references and detailed descriptions of my characters, or to look at how I have progressed overtime.
                     Unfortunately, I do not draw as much as I used to, but there are some times where I'll make something out of nowhere when I am in the mood.
                 </p>
-                <p>I also have music on this site as well. I would consider it "art" after all. Once I produce more, it'll go into a separate category.</p>
+                <p>I will eventually add music on this site as well. I would consider it "art" after all. Once I produce more, it'll go into a separate category.</p>
             </div>
             <p><b>This page is still a work in progress!</b></p>
             <div>
-                <h2><u>Sorted By Year</u></h2>
-                <p>All of my art sorted in reverse-chronological order. You can see how much I have improved over the years!</p>
-                
                 <h2><u>Characters</u></h2>
-                <h3><u>OCs</u></h3>
-                <p>Art of my original characters. Click one to view their art and a description of them.</p>
-                <h3><u>Other Characters</u></h3>
-                <p>Characters that are not OCs (I guess you'd call this fanart?)</p>
-                <h3><u>Misc.</u></h3>
-                <p>Characters I have drawn maybe once or twice, and so they don't necessarily need their own page.</p>
+                <div class="links">
+                    <ul>
+                        <li><a href="char/brulee.html"><img src="images/char/brulee/main.png"><br>Brulee</a></li>
+                        <li><a href="char/aero.html"><img src="images/char/aero/main.png"><br>Aero</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </body>
