@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
     <meta charset="utf-8">
@@ -12,9 +13,9 @@
 
         body {
             background-color: black;
-            background-image: url("images/backgrounds/snowflakes.gif"), url("images/backgrounds/starbg_bottom.png"), url("images/backgrounds/kirby_starbg.png");
-            background-position: center, center bottom, center top;
-            background-repeat: repeat, repeat-x, repeat;
+            background-image: url("images/backgrounds/starbg_bottom.png"), url("images/backgrounds/kirby_starbg.png");
+            background-position: center bottom, center top;
+            background-repeat: repeat-x, repeat;
             margin: 0px;
         }
 
@@ -27,6 +28,22 @@
 
         .entire-thing {
             min-width: 1000px;
+        }
+
+        .entire-thing::after {
+            content: "";
+            background: url("images/backgrounds/rainbows2.gif");
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat;
+            position: fixed;
+            margin: 0px;
+            opacity: .1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1; 
         }
 
         .main-window {
