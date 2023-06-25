@@ -293,6 +293,20 @@ songs: [{
     duration: "",
     url: "audio/world7.mp3",
     cover_art_url: ""
+}, {
+    name: "Dire, Dire Docks",
+    artist: "Super Mario 64",
+    album: "",
+    duration: "",
+    url: "audio/dirediredocks.mp3",
+    cover_art_url: ""
+}, {
+    name: "Rainbow Castle",
+    artist: "Mario Party",
+    album: "",
+    duration: "",
+    url: "audio/marioparty_rainbowcastle.mp3",
+    cover_art_url: ""
 }
 ]
 };
