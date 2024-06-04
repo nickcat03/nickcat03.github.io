@@ -2,23 +2,564 @@
 <html lang="en-US">
     <meta charset="utf-8">
     <style>
-    @import url('css/styles.css');
+    @import url('styles.css');
     
     body {
-        background-color: black;      
+        margin: 0;
+        text-align: center;
+        font-family: Ubuntu;
+        font-size: 15px;
+        color: #000000;
+        background-color: #FFFFFF;
+        background-image: url( "https://nippoverse.xyz/images/backgrounds/steamuserimages-a.akamaihd.jpeg" );
+        background-attachment: fixed;
+    }
+
+    h1, h2 {
+        color: #FFFFFF;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        text-shadow: 0px 2px 10px rgb(0, 81, 255);
+    }
+
+    .submission-box {
+        width: 700px;
+        text-align: left;
+        background-image: linear-gradient(to left, rgb(200, 176, 255), rgb(176, 188, 255));
+        padding: 10px 20px 10px 20px;
+        margin: 0 auto;
+        margin-top: 40px;
+        border: solid 3px #60667b;
+    }
+
+    .message-box {
+        width: 700px;
+        text-align: left;
+        margin: 20px;
+        padding: 10px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
+
+    .message {
+        background-color: white;
+    }
+
+    .message-content {
+        padding: 5px 20px 10px 20px;
+    }
+
+    .questions {
+        padding: 10px 0px 0px 20px;
+    }
+
+    .main-message {
+        font-size: 17px;
+    }
+
+    .gradient-header {
+        background-image: linear-gradient(to left, rgba(34, 39, 61, 1), rgba(145, 166, 240, 1));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: solid 1px #60667b;
+        text-shadow: -1px -1px 0 #60667b, 1px -1px 0 #60667b, -1px 1px 0 #60667b, 1px 1px 0 #60667b;
+        color: white;
+        padding: 10px;
+        height: 10px;
+        margin-bottom: 0px;
+    }
+
+    input, textarea {
+        width: 95%;
+        margin: 8px;
     }
     
     </style>
     <head>
         <link rel="icon" type="image/x-icon" href="images/favicons/favicon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=0.4" /> 
         <title>Nippo's Guestbook</title> 
     </head>
-    <frameset frameborder="0">
-        <frame name = "navbar" src = "https://nippo.123guestbook.com/#" noresize>
 
-        <noframes>
-            <body>Whoops, looks like your browser doesn't support this =)</body>
-        </noframes>
-    </frameset>
+    <body>
+        <div class="submission-box">
+
+            <h1>Nippoverse Site Guestbook</h1>
+
+            <img src="images/kirbyreading.png" style="display: block; margin: auto;">
+
+            <p style="text-align: center">If you would like to share something on my site, feel free to do so here!</p>
+
+            <label>Name:</label> <input type="text" id="name" placeholder="Leave blank to be anonymous.">
+            <label>Website:</label> <input type="text" id="website" placeholder="(Optional)"><br>
+            <label>Video game suggestions?</label> <input type="text" id="videogames" placeholder="(Optional)"><br>
+            <label>How'd you find this website?</label> <input type="text" id="found" placeholder="(Optional)"><br>
+            <label>Message:</label> <textarea style="height: 100px;" id="message" placeholder="Add a URL to an image or audio file if you would like to include one in your message."></textarea>
+            <button id="send">Send</button>
+        </div>
+
+        <div class="message-box">
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>niasssu</p>
+                    <p>04-20-2024</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>alright i actually have one this time</p>
+                        <b>How'd you find this website?</b>
+                        <p>bookmarks tab</p>
+                    </div>
+                    <div class="main-message">
+                        <p>So I remember this wii game with cats that do magic, it was kinda like a board game. I didn't fully understand the rules nor the premise at the time - I was somewhere between 6 and 8 years old. There was like a war I think. I don't remember what it was called either, but if you could somehow find it, I would like to see it played!</p>
+                        <p>Uh, otherwise; Good job on the site!</p>
+                        <p>// :3</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Scor</p>
+                    <p>03-20-2024</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Klonoa but you likely know</p>
+                        <b>How'd you find this website?</b>
+                        <p>the speedrun analysis vid shoutout</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Heyo bud! Found out about you in that vid, and i was like: hey that guy's pfp looks super sweet, wonder if i can check them out somehow, and then i stumbled upon this site... Absolutely perfect this place is. A beautiful haven fitting of someone with all those interests!</p>
+                        <p>...of which i think we share a lot, obviously KSS obsession (although im too clueless to speedrun) and a fan of a lot of pretty cutesy mons, heck you're my instant friend if you love the Ccino line. Also some little things, like basically only listening to VGMs and stuff... overall a pretty cute guy, with a lot of skill and tech knowledge to back it up!</p>
+                        <p>Hope to catch you on a stream someday to say hi! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>jdxl2013</p>
+                    <p>02-17-2024</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Starbound, Undertale Yellow, Signalis, Outpatient ;) , Bug Fables, Crosscode</p>
+                        <b>How'd you find this website?</b>
+                        <p>IRL Friend + instagram + discord + been meaning to check it out</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Heya Nippo (idk if you have your real name up here so I'm using that), life has been kinda busy for me as of late but I wanted to atleast get the chance to check this out and seeing this guest book section here, I figured I may as well say how insanely cool this website is, this is honestly something I would absolutely want to try for myself.</p>
+                        <p>You did such a great job on it (idk how long you've had this site up but regardless of time it's still really cool), it honestly reminds me of those older website designs and I am such a sucker for this kind of style. I might honestly ask you later how you made this but probably not till the summer maybe when I'm more free to chat about stuff (in general tbh) and not leave on read without responding because I got distracted or busy lol (I do that way too much and then just feel more awkward not saying stuff the longer it is).</p>
+                        <p>Anyways, I'll end off just saying how amazing all the stuff you've done and hope all is going well.</p>
+                        <p>Also ig as something extra, I've been learning French as of late. Bonne journée et a bientôt, Nippo ! :)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Ray Karr - <a href="https://raykarr.neocities.org" target="blank">raykarr.neocities.org</a></p>
+                    <p>02-11-2024</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Anodyne 2, Deep Space 9 - The Fallen, Deus Ex</p>
+                        <b>How'd you find this website?</b>
+                        <p>The Furryring</p>
+                    </div>
+                    <div class="main-message">
+                        <p>I'm extremely new to exploring the internet this way, and this site was one of the coolest things I could have found, very motivating :3</p>
+                        <p>Super fun site, I love how much passion it has </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>CorvusScribe</p>
+                    <p>01-27-2024</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Cave Story, Radiant Historia, Omori, Oneshot</p>
+                        <b>How'd you find this website?</b>
+                        <p>discord bio</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Very chill site, I love it here :)</p>
+                        <p>(great music taste btw, Ima be listening to your list more often. I bet you'd enjoy module/demoscene music)</p>
+                        <p>Best of luck on future endeavors! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>niassu - <a href="https://niasssu.neocities.org" target="blank">niasssu.neocities.org</a></p>
+                    <p>10-01-2023</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>I wouldn't know any retro titles that you haven't already tried, would I? Based on your definition of 'retro' though, I'd say you could try a Wii Sports speedrun. Dunno if it would be interesting though, but give it a try. I'll do my best to watch it.</p>
+                        <b>How'd you find this website?</b>
+                        <p>Originally, I found it through a webring. Was interested so I checked it out an kept it as a bookmark.</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Keep up the good work.</p>
+                        <p>// :3</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Black Mage - <a href="https://blackmagegaming.neocities.org" target="blank">blackmagegaming.neocities.org</a></p>
+                    <p>09-25-2023</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Final Fantasy I & II: Dawn of Souls (Specifically the FF1 part, AMAZING RPG for the GBA)</p>
+                        <b>How'd you find this website?</b>
+                        <p>Linked from Daniele63's page!</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Love the vibe of the site! Kirby has always been a favorite of mine so it's very nice to see pages like yours!</p>
+                        <p>Also, Chad is awesome.</p>
+                        <p>:D</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>skelly_bones - <a href="https://c0mputerfanbl0g.neocities.org" target="blank">c0mputerfanbl0g.neocities.org</a></p>
+                    <p>08-06-2024</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>hrmm maybe Don't Starve? or the Scott Pilgrim video game!</p>
+                        <b>How'd you find this website?</b>
+                        <p>through the hottest web ring eva</p>
+                    </div>
+                    <div class="main-message">
+                        <p>yoo another fella who loves old tech! glad to see others share my hobbies as well..keep doing what ur doing! :)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Crystal - <a href="https://crystal.tilde.institute" target="blank">crystal.tilde.institute</a></p>
+                    <p>08-05-2023</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Hollow Knight</p>
+                        <b>How'd you find this website?</b>
+                        <p>the hotline webring !!!</p>
+                    </div>
+                    <div class="main-message">
+                        <p>OH MY HECKING WORLD I LOVE YOUR WEBSITE !!! So cutsy and comfy. 10/10 definitely would recommend</p>
+                        <p>Also, obligatory POYO!!!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>..</p>
+                    <p>06-21-2023</p>
+                </h3>
+                <div class="message-content">
+                    <div class="main-message">
+                        <p>Hey, any idea when you'll be back to fix our kitchen sink? My wife was home alone when you came last time and she said you were great, but our sink still leaks!?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Jolteon(real)</p>
+                    <p>03-03-2023</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Imagine playing a Fallout game</p>
+                        <b>How'd you find this website?</b>
+                        <p>I can sense gay people *SNIIFFF*</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Just took the wettest dump, AMA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>fionn</p>
+                    <p>01-29-2023</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>monster rancher advance 2 (GBA), tail of the sun (PS1)</p>
+                        <b>How'd you find this website?</b>
+                        <p>through the furry webring!</p>
+                    </div>
+                    <div class="main-message">
+                        <p>everything about this site is everything i've eeeever loved about the old web! love the midis and mix-n-match icons and all. im so inspired i want to make a site too! good job!!!!!!!! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Sif Muna - <a href="https://sif-muna.neocities.org/" target="blank">sif-muna.neocities.org/</a></p>
+                    <p>01-28-2023</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Rain World, Memoirs of Magic</p>
+                        <b>How'd you find this website?</b>
+                        <p>Friend of a friend's button!</p>
+                    </div>
+                    <div class="main-message">
+                        <p>I love your site, the retro colorful look's super cute! Looking forward to seeing your art stuff in the future! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Bechno Kid - <a href="https://bechnokid.neocities.org" target="blank">bechnokid.neocities.org</a></p>
+                    <p>11-25-2022</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Monster Hunter World, Monster Hunter Rise</p>
+                        <b>How'd you find this website?</b>
+                        <p>I found you from a notification that you followed heckmaster. Your name is cool. B)</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Even if you were born in the 2000s it is really nice to see more people who want to learn more about older video games and technology in general! You might meet people who will tell you that learning about it is different than actually living in it, and while it is true, there's nothing wrong with wanting to learn the history of technology and how it's evolved!!</p>
+                        <p>Also, your site is super colorful and I love it. Keep up the great work!!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Bloktic - <a href="https://bloktic.neocities.org/" target="blank">bloktic.neocities.org</a></p>
+                    <p>11-16-2022</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>I found his old freeware game called Within a Deep Forest the other day.</p>
+                        <b>How'd you find this website?</b>
+                        <p>Nippo posted in my guestbook.</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Neat site! Can't wait to see more of it, along with your art. Really like the Kirby navbar. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>mrpibb - <a href="https://mr-pibbs-site.neocities.org/" target="blank">mr-pibbs-site.neocities.org</a></p>
+                    <p>11-11-2022</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>disco elysium, brigador, vintage story</p>
+                        <b>How'd you find this website?</b>
+                        <p>neocities activity wall</p>
+                    </div>
+                    <div class="main-message">
+                        <p>cool site :)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Nick</p>
+                    <p>11-10-2022</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>RTDL</p>
+                        <b>How'd you find this website?</b>
+                        <p>Noppi himself</p>
+                    </div>
+                    <div class="main-message">
+                        <p>I'm excited to read more of your journal entries :D</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>Daniele - <a href="https://daniele63.neocities.org/" target="blank">daniele63.neocities.org</a></p>
+                    <p>10-21-2022</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>Kirby Air Ride, Zelda Windwaker, Mario 64 DS are cool i guess</p>
+                        <b>How'd you find this website?</b>
+                        <p>Searched for kirby websites on neocities</p>
+                    </div>
+                    <div class="main-message">
+                        <p>Enjoying the banger songs</p>
+                        <hr>
+                        <b>Replied on 10-24-2022:</b>
+                        <p>Glad you enjoy them!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>dimwit - <a href="https://dimwit.neocities.org" target="blank">dimwit.neocities.org</a></p>
+                    <p>10-19-2022</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>idk.. mario 64, gunstar heroes</p>
+                        <b>How'd you find this website?</b>
+                        <p>some discord</p>
+                    </div>
+                    <div class="main-message">
+                        <p>cool site i like</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template
+            <div class="message">
+                <h3 class="gradient-header">
+                    <p>name - <a href="site" target="blank">site</a></p>
+                    <p>00-00-2024</p>
+                </h3>
+                <div class="message-content">
+                    <div class="questions">
+                        <b>Video game suggestions?</b>
+                        <p>a</p>
+                        <b>How'd you find this website?</b>
+                        <p>a</p>
+                    </div>
+                    <div class="main-message">
+                        <p>msg</p>
+                    </div>
+                </div>
+            </div>
+            -->
+            
+        </div>
+    </body>
+
+
+    <script>
+        // this code executes when the 'send' button is clicked
+        document.getElementById('send').onclick = function() {
+            var request = new XMLHttpRequest();
+            // I hate to make this public, do your worst I guess.
+            request.open("POST", "https://discord.com/api/webhooks/1247308021021937728/Tk3xxIoQtyOzEO44drHCYipHIp4KVHUtIUprQJQ_40K4ckzbPd63_nv3rZ9gaXbEBWsu");
+            request.setRequestHeader('Content-type', 'application/json');
+
+            // Check if the request is successful
+            request.onreadystatechange = function () {
+                if (request.readyState === 4) {
+                    if (request.status === 200) {
+                        alert('Thank you! Your message will be added shortly :3');
+                        document.getElementById("name").value = '';
+                        document.getElementById("website").value = '';
+                        document.getElementById("videogames").value = '';
+                        document.getElementById("found").value = '';
+                        document.getElementById("message").value = '';
+                    }
+                }
+            };
+
+            // Handle network errors
+            request.onerror = function () {
+                alert('Network error. Please check your internet connection and try again.');
+            };
+        
+            var date = new Date();
+            var f_date = date.toLocaleDateString("en-US");
+            var username = f_date;
+            var msg
+
+            var name = document.getElementById("name").value;
+            var website = document.getElementById("website").value;
+            var videogames = document.getElementById("videogames").value;
+            var found = document.getElementById("found").value;
+            var message = document.getElementById("message").value;
+
+            var msg = "`";
+
+            if (name.trim() !== "") {
+                msg += "Name: " + name + "\n";
+            }
+            if (website.trim() !== "") {
+                msg += "Website: " + website + "\n";
+            }
+            if (videogames.trim() !== "") {
+                msg += "Video game suggestions? " + videogames + "\n";
+            }
+            if (found.trim() !== "") {
+                msg += "How'd you find this website? " + found + "\n";
+            }
+            if (message.trim() !== "") {
+                msg += "Message: " + message;
+            }
+
+            msg += "`";
+
+            // Make sure length of message doesn't exceed Discord character limit.
+            if (msg.length >= 2000) {
+                alert("Please make your message shorter! (at least less than 2000 characters)")
+            }
+            // If there is nothing contained in the boxes, don't send anything.
+            else if (msg !== "``") {
+                var params = {
+                username: username,
+                content: msg,
+                }
+                request.send(JSON.stringify(params));
+
+                alert('Thank you! Your message will be added shortly :3');
+                document.getElementById("name").value = '';
+                document.getElementById("website").value = '';
+                document.getElementById("videogames").value = '';
+                document.getElementById("found").value = '';
+                document.getElementById("message").value = '';
+            }
+            else {
+                alert("You didn't fill anything out silly! :3c")
+            }
+        }
+    </script>
 </html>
